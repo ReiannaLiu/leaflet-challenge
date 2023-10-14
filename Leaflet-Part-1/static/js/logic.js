@@ -1,15 +1,13 @@
-// Create the tile layer that will be the background of our map.
-let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
 
 let map = L.map("map", {
     center: [39.8283, -98.5795],
     zoom: 4
 });
 
-// Add our "streetmap" tile layer to the map.
-streetmap.addTo(map);
+// Create the tile layer that will be the background of our map.
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
 
 // Perform an API call to the earthquakes information endpoint.
